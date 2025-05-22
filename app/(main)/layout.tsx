@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Sidebar from "./components/Sidebar.tsx" 
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={inter.className}>
-        <nav className="bg-blue-600 text-white p-4">
+            <Sidebar/>
+        <nav className="fixed top-0 left-0 w-full bg-blue-600 text-white p-4">
           <div className="container mx-auto flex justify-between items-center">
             <a href="/" className="text-4xl font-bold">BlogSitesi</a>
             <div className="space-x-4">
